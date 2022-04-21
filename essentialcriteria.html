@@ -2,6 +2,7 @@
 
 <html lang="en">
   <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
@@ -12,42 +13,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <style>
-      h1 {
-        text-align: center;
-      }
-      div {
-        margin: 12px 42px;
-        padding: 15px;
-        border-radius: 35px;
-        max-width: 5000px;
-        border: 2px solid #dadde1;
-      }
-      p {
-        margin: 10px 40px;
-        text-align: justify;
-        font-family: "Montserrat", sans-serif;
-      }
-      button {
-        margin: 0 auto;
-        display: block;
-        box-shadow: grey;
-        transition: all 500ms linear;
-        box-shadow: 4px 4px 2px gray;
-        line-height: 100%;
-        padding: 20px;
-        border: 4px solid grey;
-        border-radius: 40px;
-      }
-      button:hover {
-        cursor: pointer;
-        background-color: #82858f;
-        color: white;
-      }
-      a {
-        text-decoration: none;
-      }
-    </style>
+    <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <h1>Essential criteria</h1>
@@ -132,33 +98,6 @@
         <a href="15criteria.html"> <button type="submit">Next</button></a>
       </form>
     </div>
-    <script>
-      function VerificaEssential() {
-        var seismicity = parseInt(
-          document.querySelector('input[name="question-4"]:checked').value
-        );
-        var fracturing = parseInt(
-          document.querySelector('input[name="question-5"]:checked').value
-        );
-        var areal = parseInt(
-          document.querySelector('input[name="question-6"]:checked').value
-        );
-        var intermed = parseInt(
-          document.querySelector('input[name="question-7"]:checked').value
-        );
-        var soma = seismicity + fracturing + areal + intermed;
-        if (soma == 4) {
-          alert("Quer calcular o rankin do resevatorio");
-          window.location.href = "15criterio.html";
-        } else {
-          if (soma == 3) {
-            alert("Quer seguir mesmo assim?");
-          } else {
-            alert("Tem que responder sim pelo menos em 3 questões para seguir");
-          }
-        }
-        return false;
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
