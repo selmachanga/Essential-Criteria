@@ -14,7 +14,7 @@ function VerificaEssential() {
   var soma = seismicity + fracturing + areal + intermed;
   if (soma == 4) {
     alert("So next setp is the calculation the basin ranking");
-    window.location.href = "15criterio.html";
+    window.location.href = "https://deluxe-fairy-aeecf6.netlify.app/";
   } else {
     if (soma == 3) {
       alert(
